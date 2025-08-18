@@ -6,6 +6,7 @@ import { MessageEditor } from "@/components/controls/MessageEditor";
 import { ModelSelector } from "@/components/controls/ModelSelector";
 import { ExportPanel } from "@/components/controls/ExportPanel";
 import { useState } from "react";
+import ChatGPT from "@/components/models/ChatGPT";
 
 export default function Home() {
   const [messages, setMessages] = useState([
@@ -17,7 +18,7 @@ export default function Home() {
     },
   ]);
   const [currentSender, setCurrentSender] = useState("User");
-  console.log(currentSender)
+  console.log(currentSender);
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#0A0A0F] via-[#101019] to-[#0D0D15] text-white p-6">
       <div className="max-w-7xl mx-auto grid grid-cols-1 xl:grid-cols-2 gap-8">
@@ -30,20 +31,20 @@ export default function Home() {
             Craft realistic AI chats and export as images
           </p>
 
-          <ModelSelector currentSender={currentSender} setCurrentSender={setCurrentSender} />
-          <MessageEditor currentSender={currentSender} messages={messages} setMessages={setMessages} />
+          <ModelSelector
+            currentSender={currentSender}
+            setCurrentSender={setCurrentSender}
+          />
+          <MessageEditor
+            currentSender={currentSender}
+            messages={messages}
+            setMessages={setMessages}
+          />
           <ExportPanel />
         </div>
 
         {/* Right Chat Preview */}
-        <div className="bg-white/5 backdrop-blur border border-white/10 rounded-2xl shadow-xl overflow-hidden">
-          <ChatHeader model="GPT-4" />
-          <div className="h-[600px] overflow-y-auto p-4 space-y-3">
-            {messages.map((item) => (
-              <ChatBubble key={item.id} sender={item.sender} text={item.text} />
-            ))}
-          </div>
-        </div>
+        <ChatGPT />
       </div>
     </div>
   );
