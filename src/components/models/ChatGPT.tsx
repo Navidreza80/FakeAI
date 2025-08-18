@@ -1,8 +1,9 @@
 const ChatGPT = () => {
   return (
-    <div className="h-[600px] bg-[#212121] flex items-start">
-      <header className="px-2 py-1 flex items-center justify-between flex-1">
-        <span>
+    <div className="h-screen text-[#dcdbf6] bg-[#212121] flex flex-wrap flex-col justify-between">
+      {/* ChatGPT Header */}
+      <header className="px-2 py-2 flex items-center justify-between w-full">
+        <span className="w-9 h-9 flex items-center justify-center">
           <svg
             width="20"
             height="20"
@@ -15,8 +16,20 @@ const ChatGPT = () => {
             <path d="M11.6663 12.6686L11.801 12.6823C12.1038 12.7445 12.3313 13.0125 12.3313 13.3337C12.3311 13.6547 12.1038 13.9229 11.801 13.985L11.6663 13.9987H3.33325C2.96609 13.9987 2.66839 13.7008 2.66821 13.3337C2.66821 12.9664 2.96598 12.6686 3.33325 12.6686H11.6663ZM16.6663 6.00163L16.801 6.0153C17.1038 6.07747 17.3313 6.34546 17.3313 6.66667C17.3313 6.98788 17.1038 7.25586 16.801 7.31803L16.6663 7.33171H3.33325C2.96598 7.33171 2.66821 7.03394 2.66821 6.66667C2.66821 6.2994 2.96598 6.00163 3.33325 6.00163H16.6663Z"></path>
           </svg>
         </span>
-        <button className="w-[161.07px] h-[35.99px] rounded-full"></button>
-        <span className="w-6 h-6 flex items-center justify-center">
+        <button className="w-[161.07px] h-[35.99px] rounded-full bg-[#373669] font-semibold text-sm flex items-center justify-center gap-1">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-4 h-4"
+          >
+            <path d="M17.665 10C17.665 10.6877 17.1785 11.2454 16.5488 11.3945L16.4219 11.4189C14.7098 11.6665 13.6129 12.1305 12.877 12.8623C12.1414 13.5938 11.6742 14.6843 11.4238 16.3887C11.3197 17.0973 10.7182 17.665 9.96484 17.665C9.27085 17.665 8.68836 17.1772 8.53613 16.5215C8.12392 14.7459 7.6623 13.619 6.95703 12.8652C6.31314 12.1772 5.39414 11.7268 3.88672 11.4688L3.57715 11.4199C2.88869 11.319 2.33496 10.734 2.33496 10C2.33496 9.26603 2.88869 8.681 3.57715 8.58008L3.88672 8.53125C5.39414 8.27321 6.31314 7.82277 6.95703 7.13477C7.6623 6.38104 8.12392 5.25413 8.53613 3.47852L8.56934 3.35742C8.76133 2.76356 9.31424 2.33496 9.96484 2.33496C10.7182 2.33497 11.3197 2.9027 11.4238 3.61133L11.5283 4.22266C11.7954 5.58295 12.2334 6.49773 12.877 7.1377C13.6129 7.86952 14.7098 8.33351 16.4219 8.58105C17.1119 8.68101 17.665 9.26667 17.665 10Z"></path>
+          </svg>{" "}
+          Upgrade your plan
+        </button>
+        <span className="w-9 h-9 flex items-center justify-center">
           <svg
             width="20"
             height="20"
@@ -36,6 +49,57 @@ const ChatGPT = () => {
           </svg>
         </span>
       </header>
+      <div className="text-3xl pb-9 w-full flex flex-wrap items-start justify-center px-4">
+        <h1 className="mb-7">What&apos;s on your mind today?</h1>
+        <div className="bg-[#303030] shadow-[inset_0_1px_10px_rgba(255,255,255,0.05)] rounded-full h-[56px] w-full flex items-center">
+          <div className=" pl-5">
+            {" "}
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-5 h-5"
+            >
+              <path d="M9.33496 16.5V10.665H3.5C3.13273 10.665 2.83496 10.3673 2.83496 10C2.83496 9.63273 3.13273 9.33496 3.5 9.33496H9.33496V3.5C9.33496 3.13273 9.63273 2.83496 10 2.83496C10.3673 2.83496 10.665 3.13273 10.665 3.5V9.33496H16.5L16.6338 9.34863C16.9369 9.41057 17.165 9.67857 17.165 10C17.165 10.3214 16.9369 10.5894 16.6338 10.6514L16.5 10.665H10.665V16.5C10.665 16.8673 10.3673 17.165 10 17.165C9.63273 17.165 9.33496 16.8673 9.33496 16.5Z"></path>
+            </svg>
+          </div>
+          <input
+            type="text"
+            className="flex-1 text-[15px] focus:ring-0 ring-0 flex items-center pl-5 outline-none focus:outline-none"
+            placeholder="Ask anything..."
+          />
+          <span className="px-4">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+              aria-label=""
+              font-size="inherit"
+            >
+              <path d="M15.7806 10.1963C16.1326 10.3011 16.3336 10.6714 16.2288 11.0234L16.1487 11.2725C15.3429 13.6262 13.2236 15.3697 10.6644 15.6299L10.6653 16.835H12.0833L12.2171 16.8486C12.5202 16.9106 12.7484 17.1786 12.7484 17.5C12.7484 17.8214 12.5202 18.0894 12.2171 18.1514L12.0833 18.165H7.91632C7.5492 18.1649 7.25128 17.8672 7.25128 17.5C7.25128 17.1328 7.5492 16.8351 7.91632 16.835H9.33527L9.33429 15.6299C6.775 15.3697 4.6558 13.6262 3.84992 11.2725L3.76984 11.0234L3.74445 10.8906C3.71751 10.5825 3.91011 10.2879 4.21808 10.1963C4.52615 10.1047 4.84769 10.2466 4.99347 10.5195L5.04523 10.6436L5.10871 10.8418C5.8047 12.8745 7.73211 14.335 9.99933 14.335C12.3396 14.3349 14.3179 12.7789 14.9534 10.6436L15.0052 10.5195C15.151 10.2466 15.4725 10.1046 15.7806 10.1963ZM12.2513 5.41699C12.2513 4.17354 11.2437 3.16521 10.0003 3.16504C8.75675 3.16504 7.74835 4.17343 7.74835 5.41699V9.16699C7.74853 10.4104 8.75685 11.418 10.0003 11.418C11.2436 11.4178 12.2511 10.4103 12.2513 9.16699V5.41699ZM13.5814 9.16699C13.5812 11.1448 11.9781 12.7479 10.0003 12.748C8.02232 12.748 6.41845 11.1449 6.41828 9.16699V5.41699C6.41828 3.43889 8.02221 1.83496 10.0003 1.83496C11.9783 1.83514 13.5814 3.439 13.5814 5.41699V9.16699Z"></path>
+            </svg>
+          </span>
+          <span className="w-9 h-9 flex items-center justify-center bg-[#424242] rounded-full mr-2.5">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M7.167 15.416V4.583a.75.75 0 0 1 1.5 0v10.833a.75.75 0 0 1-1.5 0Zm4.166-2.5V7.083a.75.75 0 0 1 1.5 0v5.833a.75.75 0 0 1-1.5 0ZM3 11.25V8.75a.75.75 0 0 1 1.5 0v2.5a.75.75 0 0 1-1.5 0Zm12.5 0V8.75a.75.75 0 0 1 1.5 0v2.5a.75.75 0 0 1-1.5 0Z"></path>
+            </svg>
+          </span>
+        </div>
+      </div>
+      <footer className="text-[12px] w-full text-center py-1.5">
+        ChatGPT can make mistakes. Check important info. See 
+        <span className="ml-1 underline text-white">Cookie Preferences.</span>
+      </footer>
     </div>
   );
 };

@@ -1,12 +1,10 @@
 "use client";
 
-import { ChatHeader } from "@/components/chat/ChatHeader";
-import { ChatBubble } from "@/components/chat/ChatBubble";
+import { ExportPanel } from "@/components/controls/ExportPanel";
 import { MessageEditor } from "@/components/controls/MessageEditor";
 import { ModelSelector } from "@/components/controls/ModelSelector";
-import { ExportPanel } from "@/components/controls/ExportPanel";
-import { useState } from "react";
 import ChatGPT from "@/components/models/ChatGPT";
+import { useState } from "react";
 
 export default function Home() {
   const [messages, setMessages] = useState([
@@ -20,10 +18,10 @@ export default function Home() {
   const [currentSender, setCurrentSender] = useState("User");
   console.log(currentSender);
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#0A0A0F] via-[#101019] to-[#0D0D15] text-white p-6">
+    <div className="min-h-screen bg-gradient-to-br from-[#0A0A0F] via-[#101019] to-[#0D0D15] text-white">
       <div className="max-w-7xl mx-auto grid grid-cols-1 xl:grid-cols-2 gap-8">
         {/* Left Controls */}
-        <div className="space-y-3">
+        <div className="space-y-3 p-6">
           <h1 className="text-4xl font-extrabold tracking-tight">
             AI Snapshot Generator
           </h1>
