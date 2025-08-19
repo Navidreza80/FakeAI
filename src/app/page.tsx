@@ -3,7 +3,7 @@
 import { ExportPanel } from "@/components/controls/ExportPanel";
 import { MessageEditor } from "@/components/controls/MessageEditor";
 import { ModelSelector } from "@/components/controls/ModelSelector";
-import ChatGPT from "@/components/models/ChatGPT";
+import ChatGPT from "@/components/models/ChatGPT/ChatGPT";
 import { useState } from "react";
 
 export default function Home() {
@@ -42,7 +42,7 @@ export default function Home() {
         </div>
 
         {/* Right Chat Preview */}
-        <ChatGPT />
+        <ChatGPT messages={messages} />
       </div>
     </div>
   );

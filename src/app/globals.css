@@ -35,3 +35,32 @@ html {
 html::-webkit-scrollbar {
   display: none;
 }
+
+.scroll-area {
+  scrollbar-color: rgba(100, 100, 100, 0.7) transparent;
+}
+
+/* WebKit-based (Chrome, Edge, Safari) */
+.scroll-area::-webkit-scrollbar {
+  width: 12px; /* fatter */
+  height: 12px;
+}
+.scroll-area::-webkit-scrollbar-track {
+  background: transparent;
+}
+.scroll-area::-webkit-scrollbar-thumb {
+  background-color: rgba(61, 61, 61, 0.7); /* darker */
+  border-radius: 8px;
+  border: 3px solid transparent; /* padding effect */
+  background-clip: padding-box;
+  transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+.scroll-area:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(50, 50, 50, 0.9); /* darker on hover */
+}
+.tooltip{
+  display: none;
+}
+.tooltip:has(:hover) {
+  display: block;
+}
