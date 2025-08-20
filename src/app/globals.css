@@ -58,9 +58,17 @@ html::-webkit-scrollbar {
 .scroll-area:hover::-webkit-scrollbar-thumb {
   background-color: rgba(50, 50, 50, 0.9); /* darker on hover */
 }
-.tooltip{
-  display: none;
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
 }
-.tooltip:has(:hover) {
-  display: block;
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 3px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
 }

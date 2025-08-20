@@ -9,16 +9,26 @@ import {
   SelectItem,
 } from "@/components/ui/select";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import React from "react";
 
-const models = [
-  { id: "User", label: "User" },
+export type Model = "GPT-4" | "Claude 3" | "Gemini Pro" | "Llama 3";
+
+const models: { id: Model; label: string }[] = [
   { id: "GPT-4", label: "GPT-4" },
   { id: "Claude 3", label: "Claude 3" },
   { id: "Gemini Pro", label: "Gemini Pro" },
   { id: "Llama 3", label: "Llama 3" },
 ];
 
-export function ModelSelector({ currentSender, setCurrentSender }) {
+interface ModelSelectorProps {
+  currentSender: Model;
+  setCurrentSender: React.Dispatch<React.SetStateAction<Model>>;
+}
+
+export function ModelSelector({
+  currentSender,
+  setCurrentSender,
+}: ModelSelectorProps) {
   return (
     <Card className="bg-white/5 backdrop-blur-3xl border border-white/10">
       <CardHeader>
@@ -29,8 +39,8 @@ export function ModelSelector({ currentSender, setCurrentSender }) {
       </CardHeader>
       <CardContent>
         <Select
-          onValueChange={(e) => setCurrentSender(e)}
-          defaultValue={currentSender}
+          onValueChange={(value: Model) => setCurrentSender(value)}
+          value={currentSender}
         >
           <SelectTrigger className="w-full bg-black/40 border-white/10 text-gray-200">
             <SelectValue placeholder="Select an AI model" />
