@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# FakeAI
 
-## Getting Started
+![Stars](https://img.shields.io/github/stars/Navidreza80/FakeAI?style=social) ![Repo Size](https://img.shields.io/github/repo-size/Navidreza80/FakeAI) ![TypeScript](https://img.shields.io/badge/TypeScript-96.9%-in-repo-blue)
 
-First, run the development server:
+**Generate Fake AI Snapshots :) — A fun, creative side project.**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+##  Demo
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+https://fakaigenerator.netlify.app/
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+##  Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- Snapshot-style UI to display **fake AI-generated content** (e.g., text/image simulations)
+- Built with **Next.js** (via `create-next-app`)
+- Developed using **TypeScript**, CSS modules, and modern component patterns
+-Click to generate snapshot
+-Download image in .png format
+-Customize prompts
 
-## Learn More
+##  Tech Stack
 
-To learn more about Next.js, take a look at the following resources:
+- **Framework:** Next.js  
+- **Language:** TypeScript  
+- **Styling:** CSS / Tailwind CSS *(whichever applies)*  
+- **Bundler/Transpiler:** Netlify optimized via `next/font` using the Geist font :contentReference[oaicite:1]{index=1}
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+##  Installation & Setup
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Clone the repo  
+   ```bash
+   git clone https://github.com/Navidreza80/FakeAI.git
+   cd FakeAI
+   npm install
+   # or yarn install / pnpm install
+   npm run dev
+   # or yarn dev / pnpm dev / bun dev
 
-## Deploy on Vercel
+Open http://localhost:3000 to view
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+| Command         | Description                       |
+| --------------- | --------------------------------- |
+| `npm run dev`   | Start local development server    |
+| `npm run build` | Create optimized production build |
+| `npm start`     | Start server in production mode   |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Configuration
+
+Ensure your system has Node.js (v14+) and npm/yarn installed
+
+This project includes eslint.config.mjs, tsconfig.json, postcss.config.mjs for code quality and configuration
+
+
+## Contributing
+
+Contributions are welcome! To help:
+
+Fork the repo
+
+Create a feature branch: git checkout -b my-feature
+
+Make your changes & commit: git commit -m "Add XYZ feature"
+
+Push to your branch & open a Pull Request
+
