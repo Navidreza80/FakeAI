@@ -16,8 +16,8 @@ const ChatGPT = forwardRef<HTMLDivElement, { messages: MessageType[] }>(
     return (
       <div
         ref={ref}
-        className={`h-screen sticky top-10 mb-10 text-[#dcdbf6] bg-[#212121] flex flex-wrap flex-col ${
-          messages ? "justify-start" : "justify-between"
+        className={`h-screen sticky top-10 text-[#dcdbf6] bg-[#212121] flex flex-wrap flex-col ${
+          messages.length > 0 ? "justify-start" : "justify-between"
         }`}
       >
         {/* ChatGPT Header */}
@@ -39,6 +39,14 @@ const ChatGPT = forwardRef<HTMLDivElement, { messages: MessageType[] }>(
             <h1 className="mb-7">What&apos;s on your mind today?</h1>
             <ChatGPTInput />
           </div>
+        )}
+        {!(messages.length > 0) && (
+          <footer className={`text-[12px] w-full text-center py-1.5 `}>
+            ChatGPT can make mistakes. Check important info. See
+            <span className="ml-1 underline text-white">
+              Cookie Preferences.
+            </span>
+          </footer>
         )}
 
         <div className="w-full px-4 h-[calc(100%-120px)] overflow-y-scroll scroll-area overflow-x-hidden">
