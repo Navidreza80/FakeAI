@@ -34,7 +34,7 @@ const ChatGPT = forwardRef<HTMLDivElement, { messages: MessageType[] }>(
           </span>
         </header>
 
-        {!messages && (
+        {!(messages.length > 0) && (
           <div className="text-3xl pb-9 w-full flex flex-wrap items-start justify-center px-4">
             <h1 className="mb-7">What&apos;s on your mind today?</h1>
             <ChatGPTInput />
@@ -52,18 +52,17 @@ const ChatGPT = forwardRef<HTMLDivElement, { messages: MessageType[] }>(
           ))}
         </div>
 
-        <div className="w-full absolute bottom-8 px-4">
-          <ChatGPTInput />
-        </div>
-
-        <footer
-          className={`text-[12px] w-full text-center py-1.5 ${
-            messages && "absolute bottom-0"
-          }`}
-        >
-          ChatGPT can make mistakes. Check important info. See
-          <span className="ml-1 underline text-white">Cookie Preferences.</span>
-        </footer>
+        {messages.length > 0 && (
+          <div className="w-full absolute bottom-1 px-4">
+            <ChatGPTInput />
+            <footer className={`text-[12px] w-full text-center pt-1.5 `}>
+              ChatGPT can make mistakes. Check important info. See
+              <span className="ml-1 underline text-white">
+                Cookie Preferences.
+              </span>
+            </footer>
+          </div>
+        )}
       </div>
     );
   }
