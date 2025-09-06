@@ -4,6 +4,9 @@
 
 **Generate Fake AI Snapshots :) — A fun, creative side project.**
 
+<img width="1919" height="927" alt="image" src="https://github.com/user-attachments/assets/895eea9b-6fe7-4f96-b2d7-59b6e1b87438" />
+<img width="1248" height="1484" alt="chat-snapshot (3)" src="https://github.com/user-attachments/assets/45f0dabf-0ddd-4347-8d5e-a05acfa4d2e9" />
+
 ##  Demo
 
 https://fakaigenerator.netlify.app/
